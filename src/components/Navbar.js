@@ -10,14 +10,14 @@ import {
 
 const Navbar = () => {
     return (
-        <>
+        <div className="navbar">
             <Nav>
                 <Bars />
 
                 <NavMenu>
-                    <NavLink to="/home">Home</NavLink>
-                    <NavLink to="/about" >About</NavLink>
-                    <NavLink to="/product" activeStyle>Products</NavLink>
+                    <NavBtnLink to="/home">Home</NavBtnLink>
+                    <NavBtnLink to="/about" >About</NavBtnLink>
+                    <NavBtnLink to="/product" activeStyle>Products</NavBtnLink>
                     <NavBtnLink to="/signup" activeStyle>Sign up</NavBtnLink>
                     <NavBtnLink to='/login'>Login</NavBtnLink>
                 </NavMenu>
@@ -27,7 +27,7 @@ const Navbar = () => {
                     </NavBtnLink>
                 </NavBtn>
             </Nav>
-        </>
+        </div>
     );
 };
 
