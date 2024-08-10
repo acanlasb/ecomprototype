@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+.home {
+  margin-left: 0.5cm;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-card-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* Use flexbox for layout */
+  flex-wrap: wrap;
+  /* Allow wrapping of items */
+  justify-content: space-between;
+  /* Space between cards */
+  padding: 10px;
+  /* Padding around the container */
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  /* Background color for the card */
+  border-radius: 5px;
+  /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow effect */
+  margin-bottom: 20px;
+  /* Margin at the bottom of each card */
+  padding: 15px;
+  /* Padding inside each card */
+  flex-basis: calc(25% - 20px);
+  /* Basis for each card (4 cards per row) */
+  box-sizing: border-box;
+  /* Include padding and border in element's total width/height */
+  grid-row-start: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-card {
+    flex-basis: calc(50% - 20px);
+    /* Adjust to two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    flex-basis: calc(100% - 20px);
+    /* Stack cards on top of each other on very small screens */
+  }
+}
+
+.product-image {
+  width: 100%;
+  /* Full width of the card */
+  height: auto;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+  /* Cover ensures image fills area without distortion */
+  padding-top: 0.5cm;
+}
+
+.product-title {
+  font-size: 16px;
+  /* Adjust as needed */
+}
+
+.product-price {
+  font-size: 14px;
+  /* Adjust as needed */
+}
+
+.buy-button {
+  background-color: #007bff;
+  /* Button color */
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* Text color */
 }
